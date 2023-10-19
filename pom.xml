@@ -16,8 +16,8 @@
 
         <junit-platform-suite.version>1.9.2</junit-platform-suite.version>
         <cucumber.version>7.11.1</cucumber.version>
-        <selenium-java.version>4.8.1</selenium-java.version>
-        <webdrivermanager.version>5.3.2</webdrivermanager.version>
+        <selenium-java.version>4.13.0</selenium-java.version>
+        <webdrivermanager.version>5.4.1</webdrivermanager.version>
         <allure-junit5.version>2.21.0</allure-junit5.version>
         <maven-surefire-plugin.version>3.0.0-M9</maven-surefire-plugin.version>
         <aspectj.version>1.8.10</aspectj.version>
@@ -35,18 +35,18 @@
         <dependency>
             <groupId>com.codeborne</groupId>
             <artifactId>selenide</artifactId>
-            <version>6.12.2</version>
+            <version>6.19.0</version>
             <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>com.codeborne</groupId>
             <artifactId>selenide-core</artifactId>
-            <version>6.12.2</version>
+            <version>6.19.0</version>
         </dependency>
-        <dependency>
+       <dependency>
             <groupId>com.codeborne</groupId>
             <artifactId>selenide</artifactId>
-            <version>6.12.2</version>
+            <version>6.19.0</version>
             <scope>compile</scope>
         </dependency>
         <dependency>
@@ -100,20 +100,14 @@
             <scope>test</scope>
         </dependency>
         <dependency>
-            <groupId>io.github.bonigarcia</groupId>
-            <artifactId>webdrivermanager</artifactId>
-            <version>${webdrivermanager.version}</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-api</artifactId>
-            <version>4.8.1</version>
+            <version>4.13.0</version>
         </dependency>
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-chrome-driver</artifactId>
-            <version>4.8.1</version>
+            <version>4.13.0</version>
         </dependency>
     </dependencies>
 
