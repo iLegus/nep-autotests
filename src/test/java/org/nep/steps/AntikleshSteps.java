@@ -13,12 +13,12 @@ import static org.nep.Utils.DateUtil.getDate;
 public class AntikleshSteps {
     @Пусть("^Заполняем все данные для рассчета клеща$")
     public void AntikleshData(Map<String, String> values){
-        AntikleshPage antikleshPage = page (AntikleshPage.class);
+        AntikleshPage antikleshPage = page(AntikleshPage.class);
         AntikleshPage.BirthDate.setValue(values.get("ДатаРождения"));
         AntikleshPage.BtnCalc.click();
         AntikleshPage.BtnSave.shouldBe(visible, Duration.ofSeconds(50)).click();
         AntikleshPage.FioInsurer.setValue(values.get("ФИОСтрахователя")).pressEnter();
-        AntikleshPage.BirthDate.setValue(values.get("ДатаРождения"));
+        AntikleshPage.BirthDateSave.setValue(values.get("ДатаРождения"));
         AntikleshPage.Pasp.setValue(values.get("Паспорт"));
         AntikleshPage.PaspPlace.setValue(values.get("Место"));
         AntikleshPage.Phone.setValue(values.get("Телефон"));

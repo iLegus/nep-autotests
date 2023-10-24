@@ -9,7 +9,8 @@ public class AntikleshPage {
     public static SelenideElement FioInsurer = $(By.id("Insurer__FIO"));
     public static SelenideElement BtnCalc = $(By.xpath("//span[text()='Рассчитать']"));
     public static SelenideElement BtnSave = $(By.xpath("//span[text()='Оформить']"));
-    public static SelenideElement BirthDate = $(By.id("insured_birth_date"));
+    public static SelenideElement BirthDate = $(By.id("insured1_birth_date"));
+    public static SelenideElement BirthDateSave = $(By.id("insured_birth_date"));
     public static SelenideElement Pasp = $(By.id("insured_series_and_number"));
     public static SelenideElement PaspPlace = $(By.id("insured_place_out"));
     public static SelenideElement Phone = $(By.id("insured_phone1"));
