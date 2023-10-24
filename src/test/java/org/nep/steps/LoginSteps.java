@@ -23,6 +23,14 @@ public class LoginSteps {
         loginPage.password.setValue("agentest2");
         loginPage.submitButton.click();
     }
+    @Пусть("^логин каскотест$")
+    public void loginkaskotest(){
+        LoginPage loginPage = page(LoginPage.class);
+        System.out.println("Successfully opened the page...");
+        loginPage.username.setValue("kaskotest@enayu.com");
+        loginPage.password.setValue("kaskotest@enayu.com");
+        loginPage.submitButton.click();
+    }
 
     @Пусть("^открываем сайт неп без регистрации$")
     public void enter() {
