@@ -15,4 +15,9 @@ public class MenuSteps {
         menuPage.eosagoTab.click();
 
     }
+    @Пусть("^переходим меню в Антиклещ$")
+    public void AKTab() {
+        MenuPage menuPage = page(MenuPage.class);
+        menuPage.AKTab.click();
+    }
 }
