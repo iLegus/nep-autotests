@@ -20,4 +20,10 @@ public class MenuSteps {
         MenuPage menuPage = page(MenuPage.class);
         menuPage.AKTab.click();
     }
+    @Пусть("^переходим меню в НС$")
+    public void NsTab() {
+        MenuPage menuPage = page(MenuPage.class);
+        menuPage.NsTab.click();
+    }
 }
+

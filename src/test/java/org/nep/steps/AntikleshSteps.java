@@ -14,20 +14,20 @@ public class AntikleshSteps {
     @Пусть("^Заполняем все данные для рассчета клеща$")
     public void AntikleshData(Map<String, String> values){
         AntikleshPage antikleshPage = page(AntikleshPage.class);
-        AntikleshPage.BirthDate.setValue(values.get("ДатаРождения"));
-        AntikleshPage.BtnCalc.click();
-        AntikleshPage.BtnSave.shouldBe(visible, Duration.ofSeconds(50)).click();
-        AntikleshPage.FioInsurer.setValue(values.get("ФИОСтрахователя")).pressEnter();
-        AntikleshPage.BirthDateSave.setValue(values.get("ДатаРождения"));
-        AntikleshPage.Pasp.setValue(values.get("Паспорт"));
-        AntikleshPage.PaspPlace.setValue(values.get("Место"));
-        AntikleshPage.Phone.setValue(values.get("Телефон"));
-        AntikleshPage.Email.setValue(values.get("Почта"));
-        AntikleshPage.FioInsured.setValue(values.get("ФИОСтрахуемого")).pressEnter();
-        AntikleshPage.Citizenship.click();
-        AntikleshPage.Country.click();
+        AntikleshPage.AkBirthDate.setValue(values.get("ДатаРождения"));
+        AntikleshPage.AkBtnCalc.click();
+        AntikleshPage.AkBtnSave.shouldBe(visible, Duration.ofSeconds(50)).click();
+        AntikleshPage.AkFioInsurer.setValue(values.get("ФИОСтрахователя")).pressEnter();
+        AntikleshPage.AkBirthDateSave.setValue(values.get("ДатаРождения"));
+        AntikleshPage.AkPasp.setValue(values.get("Паспорт"));
+        AntikleshPage.AkPaspPlace.setValue(values.get("Место"));
+        AntikleshPage.AkPhone.setValue(values.get("Телефон"));
+        AntikleshPage.AkEmail.setValue(values.get("Почта"));
+        AntikleshPage.AkFioInsured.setValue(values.get("ФИОСтрахуемого")).pressEnter();
+        AntikleshPage.AkCitizenship.click();
+        AntikleshPage.AkCountry.click();
 
-        AntikleshPage.Kid.click();
+        AntikleshPage.AkKid.click();
     }
 
 }
