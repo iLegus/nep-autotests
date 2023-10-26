@@ -13,17 +13,15 @@ import static com.codeborne.selenide.Condition.enabled;
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Configuration.holdBrowserOpen;
 import static com.codeborne.selenide.Selenide.page;
+import static org.nep.Utils.DateUtil.SIMPLE_DOT;
+import static org.nep.Utils.DateUtil.getDate;
 
 public class NsSteps {
     @Пусть("^заполняем данные для НС$")
     public void NsData(Map<String, String> values){
         NsPage nspage = page(NsPage.class);
         NsPage.NsSumm.click();
-        Calendar c = new GregorianCalendar();
-        c.add(Calendar.DAY_OF_YEAR, 4); // увеличиваем на 4 дня от текущей даты
-        SimpleDateFormat format1 = new SimpleDateFormat("dd.MM.yyyy"); //придаем нужный формат дате
-        String str = format1.format(c.getTime());
-        NsPage.NsBeginDate.setValue(str);
+        NsPage.NsBeginDate.setValue(getDate(SIMPLE_DOT,4,0));
         NsPage.NsBirthDate.setValue(values.get("ДатаРождения"));
         NsPage.NsSport.click();
         NsPage.NsBtnCalc.scrollIntoView(true).click();
@@ -39,7 +37,7 @@ public class NsSteps {
         NsPage.NsEmail.setValue(values.get("Почта"));
         NsPage.NsInsurerFio.setValue(values.get("ФИОЗастрахованного")).pressEnter();
         NsPage.NsBuy.click();
-        NsPage.NsPaySum.shouldBe(visible, Duration.ofSeconds(40)).isDisplayed();
+        NsPage.NsPaySum.shouldBe(visible, Duration.ofSeconds(60)).isDisplayed();
 
 
 

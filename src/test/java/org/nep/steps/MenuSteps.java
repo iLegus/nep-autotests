@@ -25,5 +25,10 @@ public class MenuSteps {
         MenuPage menuPage = page(MenuPage.class);
         menuPage.NsTab.click();
     }
+    @Пусть("^переходим меню в КАСКО$")
+    public void KaskoTab() {
+        MenuPage menuPage = page(MenuPage.class);
+        menuPage.KaskoTab.click();
+    }
 }
 
