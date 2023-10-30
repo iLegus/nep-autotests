@@ -16,7 +16,6 @@ public class KaskoPage {
     public static SelenideElement DateBuy = $(By.id("Params__DateBuy"));
     public static SelenideElement Power = $(By.id("Params__Modification__Power"));
     public static SelenideElement Engine = $(By.id("Params__Modification__EngineType"));
-    public static SelenideElement EngineType = $(By.xpath("//div[@class='form-field-select dropdown']/ul[@class='dropdown-menu show']/li[text()='Бензиновый']"));
     public static SelenideElement EngineVolume = $(By.id("Params__Modification__EngineVolume"));
     public static SelenideElement Body = $(By.id("Params__Modification__BodyType"));
     public static SelenideElement BodyType = $(By.xpath("//div[@class='form-field-select dropdown product-form__body-type']/ul[@class='dropdown-menu show']/li[1]"));
@@ -34,8 +33,31 @@ public class KaskoPage {
     public static SelenideElement ExpStart = $(By.id("Params__FullDriversInfo__FullDriver__1__ExpertienceStart"));
     public static SelenideElement Marriage = $(By.id("Params__Drivers__Driver__1__MarriageStatus"));
     public static SelenideElement MarriageStatus = $(By.xpath("//div[@class='form-field-select dropdown']/ul[@class='dropdown-menu show']/li[text()='Состоит в браке']"));
-    //TODO: дописать сюда пред полис
+    public static SelenideElement ProlongNumber = $(By.id("Prolongation__PreviousPolicyNumber"));
+    public static SelenideElement ProlongEndDate = $(By.id("Prolongation__PreviousPolicyEndDate"));
+    public static SelenideElement ProlongCompany = $(By.id("Prolongation__PreviousInsuranceCompany"));
+    public static SelenideElement ProlongFranch = $(By.xpath("//span[text()='Без франшизы']"));
+    public static SelenideElement ProlongFranchSum = $(By.id("Prolongation__PreviousFranchise"));
+    public static SelenideElement ProlongSum = $(By.id("Prolongation__PreviousPremium"));
+    public static SelenideElement ProlongCost = $(By.id("Prolongation__PreviousCost"));
+    public static SelenideElement FrachSum = $(By.id("Params__Franchise"));
+    public static SelenideElement GAP = $(By.xpath("//span[text()='ГАП']"));
     public static SelenideElement CalcBtn = $(By.xpath("//span[text()='Рассчитать']"));
+    public static SelenideElement SaveBtn = $(By.xpath(".//img[@src='/Assets/img/insurances/SOGLASIE.svg']/ancestor::*/div[@class='precalc-result-kasko__execute']/div/button"));
+    //Страница оформления
+    public static SelenideElement NumberOfKeys = $(By.id("Params__NumberOfKeys"));
+    public static SelenideElement OwnerNum = $(By.id("Params__OwnerNum"));
+    public static SelenideElement STSNumber = $(By.id("VehicleRegistration__Series_and_Number_documents2"));
+    public static SelenideElement STSDate = $(By.id("Params__VehicleRegistration__IssuedDate_documents2"));
+    public static SelenideElement PTSNumber = $(By.id("PTS__Series_and_Number_documents2"));
+    public static SelenideElement PTSDate = $(By.id("Params__PTS__IssuedDate_documents2"));
+    public static SelenideElement Division = $(By.id("Params__Owner__PersonDocument__SubdivisionCode"));
+    public static SelenideElement PasportIssueBy = $(By.id("Params__Owner__PersonDocument__IssuedBy"));
+    public static SelenideElement PasportIssueDate = $(By.id("Params__Owner__PersonDocument__IssuedDate"));
+    public static SelenideElement Phone = $(By.id("Params__Insurer__Phone"));
+    public static SelenideElement Email = $(By.id("Params__Insurer__Email"));
+    public static SelenideElement Next = $(By.xpath("//*[@id='execute-form']/div[2]/div[2]/div/div/div[2]/button/span"));
+
 
 
 

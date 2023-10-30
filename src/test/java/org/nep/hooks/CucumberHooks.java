@@ -6,6 +6,7 @@ import io.cucumber.java.Before;
 
 import static com.codeborne.selenide.Selenide.closeWebDriver;
 import static com.codeborne.selenide.Selenide.open;
+import static com.codeborne.selenide.WebDriverRunner.getWebDriver;
 
 public class CucumberHooks {
 
@@ -14,7 +15,14 @@ public class CucumberHooks {
         Configuration.headless=false;
         System.out.println("Starting Browser...");
         open("https://test.el-polis.ru/agent#/");
+        getWebDriver().manage().window().maximize();
         System.out.println("123");
+    }
+    @Before("@kasko")
+    public void kaskoCalc() {
+        Configuration.headless=false;
+        open("https://test.el-polis.ru/agent#/");
+        getWebDriver().manage().window().maximize();
     }
 
     @Before("@reg")
@@ -22,6 +30,7 @@ public class CucumberHooks {
         Configuration.headless=false;
         System.out.println("Starting Browser...");
         open("https://test.el-polis.ru/agent#/");
+        getWebDriver().manage().window().maximize();
         System.out.println("123");
     }
 

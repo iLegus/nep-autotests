@@ -2,9 +2,13 @@ package org.nep.steps;
 
 import io.cucumber.java.ru.Пусть;
 import org.nep.pages.KaskoPage;
+import org.openqa.selenium.Keys;
 
+import java.time.Duration;
 import java.util.Map;
 
+import static com.codeborne.selenide.Condition.*;
+import static com.codeborne.selenide.Configuration.holdBrowserOpen;
 import static com.codeborne.selenide.Selenide.page;
 
 public class KaskoSteps {
@@ -21,10 +25,12 @@ public class KaskoSteps {
         KaskoPage.DateBuy.setValue(values.get("ДатаПокупки"));
         KaskoPage.Power.setValue(values.get("Мощность"));
         KaskoPage.Engine.click();
-        KaskoPage.EngineType.click();
+        KaskoPage.Engine.sendKeys(Keys.ARROW_DOWN);
+        KaskoPage.Engine.pressEnter();
         KaskoPage.EngineVolume.setValue(values.get("ОбъемДвигателя"));
         KaskoPage.Body.click();
-        KaskoPage.BodyType.click();
+        KaskoPage.Body.sendKeys(Keys.ARROW_DOWN);
+        KaskoPage.Body.pressEnter();
         KaskoPage.Mileage.setValue(values.get("Пробег"));
         KaskoPage.Doors.setValue(values.get("Двери"));
         KaskoPage.Transmission.click();
@@ -38,9 +44,26 @@ public class KaskoSteps {
         KaskoPage.DriverLicense.setValue(values.get("ВУ"));
         KaskoPage.ExpStart.setValue(values.get("НачалоСтажа"));
         KaskoPage.Marriage.click();
-        KaskoPage.MarriageStatus.click();
-        KaskoPage.CalcBtn.click();
+        KaskoPage.Marriage.sendKeys(Keys.ARROW_DOWN);
+        KaskoPage.Marriage.pressEnter();
+        //KaskoPage.GAP.click();
+        KaskoPage.CalcBtn.scrollIntoView(true).click();
+        KaskoPage.SaveBtn.shouldBe(enabled, Duration.ofSeconds(40)).click();
+        KaskoPage.NumberOfKeys.setValue(values.get("Ключи"));
+        KaskoPage.OwnerNum.setValue(values.get("Собственники"));
+        KaskoPage.STSNumber.setValue(values.get("СТС"));
+        KaskoPage.STSDate.setValue(values.get("СТСДата"));
+        KaskoPage.PTSNumber.setValue(values.get("ПТС"));
+        KaskoPage.PTSDate.setValue(values.get("ПТСДата"));
+        KaskoPage.Division.setValue(values.get("КодПодр"));
 
+        KaskoPage.PasportIssueBy.setValue(values.get("КемВыданПаспорт"));
+        KaskoPage.PasportIssueDate.setValue(values.get("ДатаВыдачиПаспорта"));
+        KaskoPage.Phone.setValue(values.get("Телефон"));
+        KaskoPage.Email.setValue(values.get("Почта"));
+        KaskoPage.Next.scrollIntoView(true).click();
+
+        holdBrowserOpen = true;
 
     }
 }
