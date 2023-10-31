@@ -32,7 +32,7 @@ public class NsSteps {
         NsPage.NsDateOut.setValue(values.get("ДатаВыдачи"));
         NsPage.NsDivision.setValue(values.get("КодПодразделения"));
         NsPage.NsPlaseOut.setValue(values.get("КемВыдан"));
-        NsPage.NsAdress.setValue(values.get("Адресс"));
+        NsPage.NsAdress.setValue(values.get("Адресс")).pressEnter();
         NsPage.NsPhone.setValue(values.get("Телефон"));
         NsPage.NsEmail.setValue(values.get("Почта"));
         NsPage.NsInsurerFio.setValue(values.get("ФИОЗастрахованного")).pressEnter();
