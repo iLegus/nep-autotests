@@ -17,6 +17,7 @@ import static com.codeborne.selenide.Selenide.page;
 import static com.codeborne.selenide.WebDriverRunner.getWebDriver;
 
 public class ContractSteps {
+    //TODO: убрать сумму
     public static String paySum = "570.00";
     @Пусть("^получаем печатки клеща$")
     public void AntikleshPrint() {
@@ -65,7 +66,7 @@ public class ContractSteps {
         String PayDocNumber = ContractsPage.orderID.getText();
 
         HttpResponse<String> response = Unirest.post("https://b2b.soglasie.ru/upload-test/diasoft/acquiring")
-                .basicAuth("nepolis", "QxWS8Fzu")
+                .basicAuth("логин", "пароль")
                 .header("Content-Type", "text/xml; charset=utf-8")
                 .header("SOAPAction", "SetTransactionPayed")
                 .body("<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:b2b=\"http://b2b.soglasie.ru/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <b2b:setTransactionPayed>\n         <Transaction>\n            <PayDocNumber>" + PayDocNumber + "</PayDocNumber> \n            <TransactionID>1117411489</TransactionID>  \n            <PaySum>" + paySum + "</PaySum> \n         </Transaction>\n      </b2b:setTransactionPayed>\n   </soapenv:Body>\n</soapenv:Envelope>")
