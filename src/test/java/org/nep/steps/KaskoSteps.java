@@ -62,6 +62,19 @@ public class KaskoSteps {
         KaskoPage.Phone.setValue(values.get("Телефон"));
         KaskoPage.Email.setValue(values.get("Почта"));
         KaskoPage.Next.scrollIntoView(true).click();
+        KaskoPage.fileStsLic.shouldBe(visible, Duration.ofSeconds(60)).sendKeys(kaskopage.filepathStsLic);
+        KaskoPage.fileStsOb.sendKeys(kaskopage.filepathStsOb);
+        KaskoPage.filePtsLic.sendKeys(kaskopage.filepathPtsLic);
+        KaskoPage.filePtsOb.sendKeys(kaskopage.filepathPtsOb);
+        KaskoPage.filePaspPhoto.sendKeys(kaskopage.filepathPaspPhoto);
+        KaskoPage.filePaspHome.sendKeys(kaskopage.filepathPaspHome);
+        KaskoPage.fileVULic.sendKeys(kaskopage.filepathVULic);
+        KaskoPage.fileVUOb.sendKeys(kaskopage.filepathVUOb);
+        KaskoPage.AddDoc.click();
+        KaskoPage.Osmotr.click();
+        KaskoPage.Next.shouldBe(enabled).click();
+        KaskoPage.AllOk.shouldBe(exist);
+
 
         holdBrowserOpen = true;
 

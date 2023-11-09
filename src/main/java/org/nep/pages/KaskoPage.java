@@ -57,6 +57,26 @@ public class KaskoPage {
     public static SelenideElement Phone = $(By.id("Params__Insurer__Phone"));
     public static SelenideElement Email = $(By.id("Params__Insurer__Email"));
     public static SelenideElement Next = $(By.xpath("//*[@id='execute-form']/div[2]/div[2]/div/div/div[2]/button/span"));
+    //Загрузка файлов
+    public static SelenideElement fileStsLic = $(By.id("file_sts_1"));
+    public static SelenideElement fileStsOb = $(By.id("file_sts_2"));
+    public static SelenideElement filePtsLic = $(By.id("file_pts_1"));
+    public static SelenideElement filePtsOb = $(By.id("file_pts_2"));
+    public static SelenideElement filePaspPhoto = $(By.id("file_passport_owner_1"));
+    public static SelenideElement filePaspHome = $(By.id("file_passport_owner_2"));
+    public static SelenideElement fileVULic = $(By.id("file_drive_licence_1_1"));
+    public static SelenideElement fileVUOb = $(By.id("file_drive_licence_1_2"));
+    public String filepathStsLic = "E:\\files_mapping\\files_mapping\\my_sts_lits.png";
+    public String filepathStsOb = "E:\\files_mapping\\files_mapping\\my_sts_ob.png";
+    public String filepathPtsLic = "E:\\files_mapping\\files_mapping\\my_pts_lits.png";
+    public String filepathPtsOb = "E:\\files_mapping\\files_mapping\\my_pts_ob.png";
+    public String filepathPaspPhoto = "E:\\files_mapping\\files_mapping\\my_passport_photo.png";
+    public String filepathPaspHome = "E:\\files_mapping\\files_mapping\\my_passport_home.png";
+    public String filepathVULic = "E:\\files_mapping\\files_mapping\\my_vu1_lits.png";
+    public String filepathVUOb = "E:\\files_mapping\\files_mapping\\my_vu1_ob.png";
+    public static SelenideElement AddDoc = $(By.xpath("//span[text()='Прикрепить документы']"));
+    public static SelenideElement Osmotr = $(By.xpath("//button[contains(text(),'Создать заявку на осмотр позже')]"));
+    public static SelenideElement AllOk = $(By.xpath("//h2[text()='Проект сохранён']"));
 
 
 

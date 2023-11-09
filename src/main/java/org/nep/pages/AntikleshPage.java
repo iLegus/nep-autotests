@@ -22,4 +22,15 @@ public class AntikleshPage {
     public static SelenideElement AkCountry = $(By.xpath("//ul[@class='ps-container nep-scrollbar nep-scrollbar_absolute nep-select__options nep-select__options_null ps ps--active-y']/li[1]"));
     public static SelenideElement AkCitizenship = $(By.id("insured1_citizenship"));
     public static SelenideElement AkPaySum = $(By.xpath("//div[@class='pay-link-modal-data__item-value']"));
+    public static SelenideElement AKPay = $(By.xpath("//span[text()='Оплатить']"));
+    public static SelenideElement AkSberSec1 = $(By.xpath("//button[@id='details-button']"));
+    public static SelenideElement AkSberSec2 = $(By.xpath("//a[@id='proceed-link']"));
+    public static SelenideElement AKCard = $(By.id("pan"));
+    public static SelenideElement AKCardDate = $(By.id("expiry"));
+    public static SelenideElement AKCardCvc = $(By.id("cvc"));
+    public static SelenideElement AKCardPay = $(By.xpath("//span[text()='Оплатить']"));
+    public static SelenideElement AKCardPass = $(By.id("password"));
+    public static SelenideElement AkPayOk = $(By.xpath("//div[@class='swal2-actions']/button[1]"));
+
+
 }

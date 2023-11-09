@@ -20,6 +20,7 @@ public class NsSteps {
     @Пусть("^заполняем данные для НС$")
     public void NsData(Map<String, String> values){
         NsPage nspage = page(NsPage.class);
+
         NsPage.NsSumm.click();
         NsPage.NsBeginDate.setValue(getDate(SIMPLE_DOT,4,0));
         NsPage.NsBirthDate.setValue(values.get("ДатаРождения"));
@@ -37,8 +38,8 @@ public class NsSteps {
         NsPage.NsEmail.setValue(values.get("Почта"));
         NsPage.NsInsurerFio.setValue(values.get("ФИОЗастрахованного")).pressEnter();
         NsPage.NsBuy.click();
-        NsPage.NsPaySum.shouldBe(visible, Duration.ofSeconds(60)).isDisplayed();
-
+        NsPage.NsPaySum.shouldBe(visible, Duration.ofSeconds(60));
+        ContractSteps.paySum = NsPage.NsPaySum.getText();
 
 
 

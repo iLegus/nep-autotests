@@ -30,5 +30,10 @@ public class MenuSteps {
         MenuPage menuPage = page(MenuPage.class);
         menuPage.KaskoTab.click();
     }
+    @Пусть("^переходим меню в Полисы$")
+    public void PolicyTab() {
+        MenuPage menuPage = page(MenuPage.class);
+        menuPage.PolicyTab.click();
+    }
 }
 
