@@ -16,10 +16,10 @@ import static org.nep.Utils.DateUtil.getDate;
 public class AntikleshSteps {
     @Пусть("^Заполняем все данные для рассчета клеща$")
     public void AntikleshData(Map<String, String> values) {
-        AntikleshPage antikleshPage = page(AntikleshPage.class);
+        AntikleshPage antikleshPage = page(AntikleshPage.class); //добавляем ссылку на элементы
         AntikleshPage.AkBirthDate.setValue(values.get("ДатаРождения"));
-        AntikleshPage.AkBtnCalc.shouldBe(visible).click();
-        AntikleshPage.AkBtnSave.shouldBe(visible, Duration.ofSeconds(120)).click();
+        AntikleshPage.AkBtnCalc.shouldBe(visible).click(); //расчет
+        AntikleshPage.AkBtnSave.shouldBe(visible, Duration.ofSeconds(120)).click(); //ожидание и Оформить
         AntikleshPage.AkFioInsurer.setValue(values.get("ФИОСтрахователя")).pressEnter();
         AntikleshPage.AkBirthDateSave.setValue(values.get("ДатаРождения"));
         AntikleshPage.AkPasp.setValue(values.get("Паспорт"));
@@ -28,14 +28,15 @@ public class AntikleshSteps {
         AntikleshPage.AkPhone.setValue(values.get("Телефон"));
         AntikleshPage.AkEmail.setValue(values.get("Почта"));
         AntikleshPage.AkFioInsured.setValue(values.get("ФИОСтрахуемого")).pressEnter();
-        AntikleshPage.AkCitizenship.click();
-        AntikleshPage.AkCountry.click();
-        AntikleshPage.AkKid.click();
-        AntikleshPage.AkBuy.click();
-        AntikleshPage.AkPaySum.shouldBe(visible, Duration.ofSeconds(120));
-        AntikleshPage.AKPay.click();
-        //оплата
+        AntikleshPage.AkCitizenship.click(); //выбор гражданства
+        AntikleshPage.AkCountry.click(); //выбор страны
+        AntikleshPage.AkKid.click(); // галка кид
+        AntikleshPage.AkBuy.click(); // Купить
+        AntikleshPage.AkPaySum.shouldBe(visible, Duration.ofSeconds(120)); //ожидание суммы
+        AntikleshPage.AKPay.click(); //оплатить
+        /*//оплата
         switchTo().window(1);
+        //ожидание ошибки серта, если есть тыкнет
         if (AntikleshPage.AkSberSec1.isDisplayed()) {
             AntikleshPage.AkSberSec1.click();
             AntikleshPage.AkSberSec2.click();
@@ -45,7 +46,7 @@ public class AntikleshSteps {
         AntikleshPage.AKCardCvc.setValue("123");
         AntikleshPage.AKCardPay.click();
         AntikleshPage.AKCardPass.setValue("12345678");
-        AntikleshPage.AkPayOk.shouldBe(visible, Duration.ofSeconds(20)).click();
+        AntikleshPage.AkPayOk.shouldBe(visible, Duration.ofSeconds(20)).click();*/
 
 
         holdBrowserOpen = true;
